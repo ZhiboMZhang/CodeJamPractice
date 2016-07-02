@@ -4,8 +4,8 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class SpeellingBee {
-	public static int sb(char[] input){
+public class SpellingBee {
+	public int sb(char[] input){
 		int l=input.length;
 		int m=1;
 		if(l>1){
@@ -74,7 +74,8 @@ public class SpeellingBee {
 					int l=input.length();
 					char[] inputch = new char[l];
 					inputch = input.toCharArray();
-					int output=sb(inputch);
+					SpellingBee sb=new SpellingBee();
+					int output=sb.sb(inputch);
 					System.out.println("Case #"+lineno+": "+output);
 				}
 				lineno++;
