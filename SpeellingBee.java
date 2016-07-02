@@ -66,19 +66,18 @@ public class SpellingBee {
 		try{
 			reader=new BufferedReader(new FileReader(file));
 			String input=null;
-			int line=1;
-			int lineno=0;
+			int line=0;
 			while((input=reader.readLine())!=null){
 				//call the lazy spelling bee method
-				if(lineno!=0){
+				if(line!=0){
 					int l=input.length();
 					char[] inputch = new char[l];
 					inputch = input.toCharArray();
 					SpellingBee sb=new SpellingBee();
 					int output=sb.sb(inputch);
-					System.out.println("Case #"+lineno+": "+output);
+					System.out.println("Case #"+line+": "+output);
 				}
-				lineno++;
+				line++;
 			}
 			reader.close();
 		}catch(IOException e){
